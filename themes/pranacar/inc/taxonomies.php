@@ -8,19 +8,19 @@
 
 	function custom_taxonomies_callback(){
 
-		// AUTORES
-		/*if( ! taxonomy_exists('autores')){
+		// Catálogo
+		if( ! taxonomy_exists('catalogo')){
 
 			$labels = array(
-				'name'              => 'Autores',
-				'singular_name'     => 'Autor',
+				'name'              => 'Catálogo',
+				'singular_name'     => 'Catálogo',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Autor',
-				'update_item'       => 'Actualizar Autor',
-				'add_new_item'      => 'Nuevo Autor',
-				'new_item_name'     => 'Nombre Nuevo Autor',
-				'menu_name'         => 'Autores'
+				'edit_item'         => 'Editar Catálogo',
+				'update_item'       => 'Actualizar Catálogo',
+				'add_new_item'      => 'Nuevo Catálogo',
+				'new_item_name'     => 'Nombre Nuevo Catálogo',
+				'menu_name'         => 'Catálogo'
 			);
 
 			$args = array(
@@ -30,13 +30,13 @@
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'autores' ),
+				'rewrite'           => array( 'slug' => 'catalogo' ),
 			);
 
-			register_taxonomy( 'autor', 'libro', $args );
-		}*/
-		
-		
+			register_taxonomy( 'catalogo', 'catalogo', $args );
+		}
+
+
 		// TERMS
 		/*if ( ! term_exists( 'Carlos Fuentes', 'autor' ) ){
 			wp_insert_term( 'Carlos Fuentes', 'autor' );
