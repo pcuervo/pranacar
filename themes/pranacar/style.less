@@ -249,12 +249,12 @@ h1{
 	.font(2em, 2.5em, 600); padding-top: @margen;
 }
 
-h2{ .font(2em, 1, 400, ~'normal', ~'lora');}
+h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
 
-h3{ .font(1.5em, 1, 400, ~'normal', ~'lora');}
+h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
 
 p{
-	.font(1.05em, 1.3em);
+	.font(1.5em, 1.2em, 100, ~'normal', ~'roboto');
 }
 
 h2, h3{
@@ -266,9 +266,9 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 }
 
 .textos-claro{
-	p{.font(1.5em, 1.2em, 100, ~'normal', ~'roboto');  color: @claro;
+	p{color: @claro;
 	}
-	h2{margin-bottom: (@margen/2); color: @claro; padding-bottom: (@margen/2);
+	h2{ color: @claro;
 	}
 	ul{ margin: 0;
 		li{.font(1.5em, 1.2em, 100, ~'normal', ~'roboto');  color: @claro; list-style: none; .margin-bottom;
@@ -278,7 +278,7 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 }
 
 .textos-oscuro{
-	p{.font(1.5em, 1.2em, 300, ~'normal', ~'roboto'); color: lighten(@oscuro,30%);
+	p{ color: lighten(@oscuro,30%);
 	}
 	h2{margin-bottom: (@margen/2); color: lighten(@oscuro,30%); padding-bottom: (@margen/2);
 	}
@@ -291,18 +291,22 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 
 
 
+
+
 /*** HEADER ***/
 header { background: @claro;
 	.menu{padding-top: @margen;
 	}
 
-	ul{ margin: @margen; position:relative; width: 100%;
-		li { display: inline-block; padding:0 10px; border-top: solid 3px @claro; vertical-align: middle; margin-top: @margen; .transition(all 0.8s ease); text-align: center;
-			&:hover{ border-top: solid 3px @highlight;
+	nav{ margin: @margen; position:relative; width: 100%;
+		 display: inline-block; padding-top: @margen;  vertical-align: middle; .transition(all 0.8s ease); text-align: center;
+			
+			a { width: auto; margin-right: @margen; border-top: solid 3px @claro; float:left; text-decoration: none; .transition;  white-space: nowrap; vertical-align: middle;.font(1em, 1.5em, 300); 
+				&:hover{ border-top: solid 3px @highlight;}
 			}
-			a { display: inline-block; width: 100%; padding: (@margen/4); text-decoration: none; .transition;  white-space: nowrap; vertical-align: middle;.font(1em, 1.5em, 300);
-			}
-		}
+			div{width:16%;
+				a{width: auto;}
+			}	
 	}
 
 }
@@ -327,7 +331,7 @@ header { background: @claro;
 
 .contenido{ position: relative;
 
-	ul{padding-top: (@margen*3);
+	ul{
 
 		li{list-style: none; text-align: center; .font(2em, 1.5em, 100);
 		}
@@ -335,22 +339,21 @@ header { background: @claro;
  }
 
 .intro{background-image: url(images/intro.jpg);
-background-size: 500%; padding-top: (@margen*4); background-repeat: no-repeat;
+background-size: 500%; background-repeat: no-repeat; padding: (@margen*4) 0;
 	ul{
-		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center; padding: (@margen*2);}
+		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center;}
 	}
 }
 
-.somos{background-image: url(images/somos-2.jpg); background-size: 100%; padding-top: (@margen*4);
-	p{text-align: center;}
-	.fondo-entero{margin-top: 10%; margin-bottom: 30%;
+.somos{background-image: url(images/somos-2.jpg); background-size: 100%; padding: (@margen*4) 0;
+	h2{text-align: center; background: rgba(0, 0, 0, .4); padding: @margen;
 	}
-	.font(1.5em, 1.5em, 300, ~'normal', ~'roboto');
 }
+	
 
 .acerca{background-image: url(images/acerca.jpg); background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 11%;
-	}
+	p{margin-bottom: (@margen*2)}
+	
 }
 
 .historia{background-color: @claro; background-size: 100%; padding-top: (@margen*4);
@@ -358,9 +361,10 @@ background-size: 500%; padding-top: (@margen*4); background-repeat: no-repeat;
 	}
 }
 
-.ofrecemos{background-image: url(images/fabricantes.jpg), url(images/clientes.jpg); background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 13%;
-	}
+.fabricantes{background-image: url(images/fabricantes.jpg); background-size: 100%; padding: (@margen*4) 0;
+}
+
+.clientes{background-image: url(images/clientes.jpg); background-size: 100%; padding: (@margen*4) 0;
 }
 
 .capacidades{background-color: @claro; background-size: 100%; padding-top: (@margen*4);
@@ -373,10 +377,16 @@ background-size: 500%; padding-top: (@margen*4); background-repeat: no-repeat;
 	p{padding: @margen;}
 }
 
-.productos{background-image: url(images/products.jpg); background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 39%;
+.productos{background-image: url(images/products.jpg); background-size: 100%; padding: (@margen*4) 0;
+	h2{.margin-bottom; padding: 0 @margen;}
+	.caja{background: rgba(0, 0, 0, .4); padding: @margen;
+		ul{
+			li{
+				padding: 0 @margen;
+			}
+		}
 	}
-	h2{.margin-bottom;}
+
 }
 
 .contacto{background: @claro; background-size: 100%; padding-top: (@margen*4);
@@ -415,12 +425,13 @@ background-size: 500%; padding-top: (@margen*4); background-repeat: no-repeat;
 		input[type="time"],
 		input[type="url"],
 		textarea,
-		select {background: rgba(255,255,255,0.1); border: none; height: auto; margin: 0; outline: 0; padding: (@margen/4); background-color: #e8eeef; color: #8a97a0; box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset; margin: 0 (@margen/4) @margen 0; .font(1em, 1.5em, 200,); border-radius: 3px;
+		select {background: rgba(255,255,255,0); border: 1px solid darken(@claro, 10%); height: auto; padding: (@margen/4); color: #8a97a0; margin: 0 (@margen/4) @margen 0; .font(1em, 1.5em, 200,);
 		}
 		input[type="radio"],
 		input[type="checkbox"] {
   			margin: 0 4px 8px 0;
 		}
+		textarea{resize:none;min-height: 200px;}
 	}
 }
 
