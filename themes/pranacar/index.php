@@ -48,9 +48,9 @@
 	 </section><!--somos-->
 
 	 <section class="clearfix acerca"><!--acerca-->
-		<div class="width block textos-oscuro fondo-entero">
-			<div id="acerca" class="center block text-center columna xmall-10 large-8  margin-bottom">
-				<h2>¿Qué hacemos?</h2>
+		<div class="width block textos-oscuro">
+			<div id="acerca" class="center block text-center columna xmall-10 large-8">
+				<h2>¿Qué hacem4os?</h2>
 		 		<p>Nos especializamos en la importación y exportación de productos orgánicos, naturales y artesanales entre México, Estados Unidos y Canadá. Buscamos ser siempre la mejor solución para los productores, clientes, distribuidores y cadenas comerciales.</p>
 		 	</div>
 
@@ -85,19 +85,23 @@
 	 		</div>
 	 </section><!--historia-->
 
-	 <section class="clearfix ofrecemos"><!--ofrecemos-->
+	 <section class="clearfix fabricantes"><!--fabricantes-->
 		<div id="fabricantes" class="width block center textos-claro fondo-entero">
-			<div class=" center block columna xmall-10 margin-bottom">
+			<div class=" center block columna xmall-8 margin-bottom">
 				<h2>A los fabricantes?</h2>
 		 		<p>Por medio de una relación cercana con los fabricantes (seleccionados con una metodología enfocada en cumplimiento de estándares de calidad, certificado de los productos y tiempos de entrega), logramos entender sus volúmenes y capacidades para así colocar sus productos en los puntos de venta con más demanda para estos. Dando así, la oportunidad de comercialización, desarrollo y crecimiento al fabricante.</p>
 		 	</div>
+		 </div>
+	</section><!--Fabricantes-->
 
-		 	<div class="center block columna xmall-10 ">
+	<section class="clearfix clientes"><!--clientes-->
+		<div id="fabricantes" class="width block center textos-oscuro">
+		 	<div class="center block columna xmall-8 ">
 		 		<h2>A los clientes</h2>
 		 		<p>Basado en los productos saludables, naturales y orgánicos que obtenemos de los fabricantes logramos darle variedad, calidad y entrega oportuna a nuestros clientes, distribuidores, cadenas comerciales y brokers. Como consecuencia, promovemos el bienestar de los clientes finales que consumen nuestros productos.</p>
 		 	</div>
 	 	</div>
-	 </section><!--ofrecemos-->
+	 </section><!--clientes-->
 
 	  <section class="clearfix capacidades"><!--capacidades-->
 		<div class="width block center textos-oscuro fondo-entero">
@@ -136,23 +140,28 @@
 	 </section><!--capacidades-->
 
 	  <section class="clearfix productos"><!--productos-->
-		<div class="width block center fondo-entero">
+		<div class="width block center">
 
-			<div id="productos" class="center block columna xmall-10 margin-bottom textos-oscuro">
+			<div id="productos" class="center block columna xmall-8 textos-claro caja">
 				<h2>Nuestros Productos</h2>
 				<ul class="center block columna xmall-12 margin-bottom">
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Productos agrícolas</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Suplementos alimenticios y vitaminas</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Productos de higiene y cuidado personal</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Botanas y postres saludables</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Alimentos básicos</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Productos lácteos</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Productos sustitutos de lácteos</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Productos agrícolas</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Jugos naturales</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Refrescos naturales</li>
-					<li class="columna xmall-6"><i class="fa fa-caret-right"></i> Salsas</li>
-
+					<li class="columna xmall-6"> Productos agrícolas</li>
+					<li class="columna xmall-6">Botanas y postres saludables</li>
+					
+					<div class="clear"></div>
+					<li class="columna xmall-6">Productos de higiene y cuidado personal</li>
+					<li class="columna xmall-6">Suplementos alimenticios y vitaminas</li>
+					<div class="clear"></div>
+					<li class="columna xmall-6">Alimentos básicos</li>
+					<li class="columna xmall-6">Productos lácteos</li>
+					<div class="clear"></div>
+					<li class="columna xmall-6">Productos sustitutos de lácteos</li>
+					<li class="columna xmall-6">Productos agrícolas</li>
+					<div class="clear"></div>
+					<li class="columna xmall-6">Jugos naturales</li>
+					<li class="columna xmall-6">Refrescos naturales</li>
+					<li class="columna xmall-6">Salsas</li>
+					<div class="clear"></div>
 				</ul>
 			</div>
 		</div>

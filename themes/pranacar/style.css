@@ -446,16 +446,16 @@ h1 {
   padding-top: 20px;
 }
 h2 {
-  font: normal 2em / 1 roboto;
+  font: normal 2.5em / 1 roboto;
   font-weight: 100;
   margin-bottom: 10px;
 }
 h3 {
-  font: normal 1.5em / 1 lora;
+  font: normal 2em / 1 lora;
   font-weight: 400;
 }
 p {
-  font: normal 1em / 1.2em roboto;
+  font: normal 1.5em / 1.2em roboto;
   font-weight: 100;
 }
 h2,
@@ -553,7 +553,7 @@ header nav a:hover {
   border-top: solid 3px #62a544;
 }
 header nav div {
-  width: 15%;
+  width: 16%;
 }
 header nav div a {
   width: auto;
@@ -610,18 +610,13 @@ header nav div a {
   background: rgba(0, 0, 0, 0.4);
   padding: 20px;
 }
-.fondo-entero {
-  font: normal 1.5em / 1.5em roboto;
-  font-weight: 300;
-}
 .acerca {
   background-image: url(images/acerca.jpg);
   background-size: 100%;
   padding-top: 80px;
 }
-.acerca .fondo-entero {
-  margin-top: 7%;
-  margin-bottom: 11%;
+.acerca p {
+  margin-bottom: 40px;
 }
 .historia {
   background-color: #ffffff;
@@ -632,14 +627,15 @@ header nav div a {
   margin-top: 7%;
   margin-bottom: 11%;
 }
-.ofrecemos {
-  background-image: url(images/fabricantes.jpg), url(images/clientes.jpg);
+.fabricantes {
+  background-image: url(images/fabricantes.jpg);
   background-size: 100%;
-  padding-top: 80px;
+  padding: 80px 0;
 }
-.ofrecemos .fondo-entero {
-  margin-top: 7%;
-  margin-bottom: 13%;
+.clientes {
+  background-image: url(images/clientes.jpg);
+  background-size: 100%;
+  padding: 80px 0;
 }
 .capacidades {
   background-color: #ffffff;
@@ -663,14 +659,18 @@ header nav div a {
 .productos {
   background-image: url(images/products.jpg);
   background-size: 100%;
-  padding-top: 80px;
-}
-.productos .fondo-entero {
-  margin-top: 7%;
-  margin-bottom: 39%;
+  padding: 80px 0;
 }
 .productos h2 {
   margin-bottom: 20px !important;
+  padding: 0 20px;
+}
+.productos .caja {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+.productos .caja ul li {
+  padding: 0 20px;
 }
 .contacto {
   background: #ffffff;
@@ -738,23 +738,22 @@ header nav div a {
 .contacto form input[type="url"],
 .contacto form textarea,
 .contacto form select {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #e6e6e6;
   height: auto;
-  margin: 0;
-  outline: 0;
   padding: 5px;
-  background-color: #e8eeef;
   color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin: 0 5px 20px 0;
   font:  1em / 1.5em "roboto";
   font-weight: 200;
-  border-radius: 3px;
 }
 .contacto form input[type="radio"],
 .contacto form input[type="checkbox"] {
   margin: 0 4px 8px 0;
+}
+.contacto form textarea {
+  resize: none;
+  min-height: 200px;
 }
 /*** ASIDE***/
 /*** FOOTER ***/
