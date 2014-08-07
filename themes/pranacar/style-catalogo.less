@@ -255,13 +255,14 @@ h4{margin:0 0 10px 0!important;font:1.5em / 1 'Roboto' !important;font-weight:30
 hr{height:1px;border:0;margin:0 0 20px 0;background:#83ad79}
 
 /*** HEADER ***/
-// header { padding:@margen/2;
-// 	a { .font(2em, 2em, 'Roboto'); font-weight: 100; color:@terciario; text-decoration: none; }
-// }
+
 
 header{padding:10px !important;}
-nav{font:1.3em / 1 'Roboto' !important;
-	a{color:#83ad79 !important;text-decoration:none }
+
+.idioma{font:1.2em / 1 'Roboto';font-weight:300;text-align:right;color:#428bca;
+	a{margin-bottom:5px;color:#428bca;text-decoration:none;text-align:right;
+		&.greyed{opacity:.5 !important;}
+	}
 }
 
 .catalogo {
@@ -272,6 +273,7 @@ nav{font:1.3em / 1 'Roboto' !important;
 		ul { display: none; list-style-type: none; cursor: default;
 			li {
 				h3 { .font(1.5em, 1.5em); font-weight: 100; color:@secundario; }
+				p{ font:1em / 1 'Roboto' !important; }
 				p:last-child { margin-top:@margen; }
 			}
 		}
