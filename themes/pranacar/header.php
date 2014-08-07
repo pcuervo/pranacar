@@ -33,13 +33,13 @@
 		<header>
 			<div class="clearfix full">
 				<div class="block center columna large-10">
-					<h1 class="columna xmall-6 large-2">
+					<h1 class="columna xmall-6 medium-3 large-2">
 						<a href="index.html">
 							<img src="<?php echo THEMEPATH; ?>images/logo-pranacar-organics-typo.png" alt="">
 						</a>
 					</h1>
 
-					<nav class="columna xmall-10 large-8 right">	
+					<nav class="columna no-medium large-8 large right">	
 						<a href="about.html">Acerca</a><a class="" href="#historia">
 						Nuestra historia</a><a href="">
 						¿Qué ofrecemos?</a><a href="">
@@ -48,13 +48,9 @@
 					<div class="right"><a href="">
 						Eng</a><a href="">
 						Esp</a>
-					</nav></div>
-						
-					<div>
-					</div>
-					
-				</div>
-			</div>
+					</nav>
+				</div>	
+			<div>
 		</header>
 
 		<div class="clearfix">
