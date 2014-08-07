@@ -249,12 +249,12 @@ h1{
 	.font(2em, 2.5em, 600); padding-top: @margen;
 }
 
-h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
+h2{ .font(2em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
 
 h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
 
 p{
-	.font(1.5em, 1.2em, 100, ~'normal', ~'roboto');
+	.font(1em, 1.7em, 100, ~'normal', ~'roboto');
 }
 
 h2, h3{
@@ -271,7 +271,7 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 	h2{ color: @claro;
 	}
 	ul{ margin: 0;
-		li{.font(1.5em, 1.2em, 100, ~'normal', ~'roboto');  color: @claro; list-style: none; .margin-bottom;
+		li{display:inline-block; .font(1em, 1.8em, 100, ~'normal', ~'roboto'); color: @claro; list-style: none; .margin-bottom;
 			i{color: @highlight;}
 		}
 	}
@@ -283,7 +283,7 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 	h2{margin-bottom: (@margen/2); color: lighten(@oscuro,30%); padding-bottom: (@margen/2);
 	}
 	ul{ margin: 0;
-		li{.font(1.5em, 1.2em, 300, ~'normal', ~'roboto');  color: lighten(@oscuro,30%);list-style: none; .margin-bottom; display: inline;
+		li{.font(1em, 1.8em, 300, ~'normal', ~'roboto');  color: lighten(@oscuro,30%);list-style: none; .margin-bottom; display: inline-block;
 			i{color: @highlight;}
 		}
 	}
@@ -308,7 +308,6 @@ header { background: @claro;
 				a{width: auto;}
 			}	
 	}
-
 }
 
 .active{
@@ -357,23 +356,21 @@ background-size: 500%; background-repeat: no-repeat; padding: (@margen*4) 0;
 }
 
 .historia{background-color: @claro; background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 11%;
-	}
 }
 
 .fabricantes{background-image: url(images/fabricantes.jpg); background-size: 100%; padding: (@margen*4) 0;
+	h2{.margin-bottom;}
 }
 
 .clientes{background-image: url(images/clientes.jpg); background-size: 100%; padding: (@margen*4) 0;
 }
 
 .capacidades{background-color: @claro; background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 13%;
+	.icono{ text-align: center;
+		.fa-inverse{color: @claro;} 
+		i{color: @highlight;}
 	}
-	.icono{
-		i{padding: (@margen - 5); color: @highlight;}
-	}
-	h2{text-align: center;}
+	h2{margin-bottom: (@margen*4); text-align: center;}
 	p{padding: @margen;}
 }
 
@@ -547,6 +544,8 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 
 }
 
+
+
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
@@ -592,7 +591,54 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 	.no-large{ display: none; }
 
 	//========================//
+
+	/*General*/
+	h1{
+	.font(2em, 2.5em, 600); padding-top: @margen;
 }
+
+h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
+
+h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
+
+p{
+	.font(1.5em, 1.7em, 100, ~'normal', ~'roboto');
+}
+
+h2, h3{
+	margin: 0 0 (@margen/4) 0;
+}
+
+a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
+	&:hover{color: @highlight;}
+}
+
+.textos-claro{
+	p{color: @claro;
+	}
+	h2{ color: @claro;
+	}
+	ul{ margin: 0;
+		li{.font(1.5em, 1.8em, 100, ~'normal', ~'roboto');  color: @claro; list-style: none; .margin-bottom;
+			i{color: @highlight;}
+		}
+	}
+}
+
+.textos-oscuro{
+	p{ color: lighten(@oscuro,30%);
+	}
+	h2{margin-bottom: (@margen/2); color: lighten(@oscuro,30%); padding-bottom: (@margen/2);
+	}
+	ul{ margin: 0;
+		li{.font(1.5em, 1.8em, 300, ~'normal', ~'roboto');  color: lighten(@oscuro,30%);list-style: none; .margin-bottom; display: inline;
+			i{color: @highlight;}
+		}
+	}
+}
+}
+
+
 
  /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {

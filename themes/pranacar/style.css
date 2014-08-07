@@ -446,7 +446,7 @@ h1 {
   padding-top: 20px;
 }
 h2 {
-  font: normal 2.5em / 1 roboto;
+  font: normal 2em / 1 roboto;
   font-weight: 100;
   margin-bottom: 10px;
 }
@@ -455,7 +455,7 @@ h3 {
   font-weight: 400;
 }
 p {
-  font: normal 1.5em / 1.2em roboto;
+  font: normal 1em / 1.7em roboto;
   font-weight: 100;
 }
 h2,
@@ -483,7 +483,8 @@ a:hover {
   margin: 0;
 }
 .textos-claro ul li {
-  font: normal 1.5em / 1.2em roboto;
+  display: inline-block;
+  font: normal 1em / 1.8em roboto;
   font-weight: 100;
   color: #ffffff;
   list-style: none;
@@ -504,12 +505,12 @@ a:hover {
   margin: 0;
 }
 .textos-oscuro ul li {
-  font: normal 1.5em / 1.2em roboto;
+  font: normal 1em / 1.8em roboto;
   font-weight: 300;
   color: #4d4d4d;
   list-style: none;
   margin-bottom: 20px !important;
-  display: inline;
+  display: inline-block;
 }
 .textos-oscuro ul li i {
   color: #62a544;
@@ -623,14 +624,13 @@ header nav div a {
   background-size: 100%;
   padding-top: 80px;
 }
-.historia .fondo-entero {
-  margin-top: 7%;
-  margin-bottom: 11%;
-}
 .fabricantes {
   background-image: url(images/fabricantes.jpg);
   background-size: 100%;
   padding: 80px 0;
+}
+.fabricantes h2 {
+  margin-bottom: 20px !important;
 }
 .clientes {
   background-image: url(images/clientes.jpg);
@@ -642,15 +642,17 @@ header nav div a {
   background-size: 100%;
   padding-top: 80px;
 }
-.capacidades .fondo-entero {
-  margin-top: 7%;
-  margin-bottom: 13%;
+.capacidades .icono {
+  text-align: center;
+}
+.capacidades .icono .fa-inverse {
+  color: #ffffff;
 }
 .capacidades .icono i {
-  padding: 15px;
   color: #62a544;
 }
 .capacidades h2 {
+  margin-bottom: 80px;
   text-align: center;
 }
 .capacidades p {
@@ -1034,6 +1036,81 @@ footer i {
   }
   .no-large {
     display: none;
+  }
+  /*General*/
+  h1 {
+    font:  2em / 2.5em "roboto";
+    font-weight: 600;
+    padding-top: 20px;
+  }
+  h2 {
+    font: normal 2.5em / 1 roboto;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font: normal 2em / 1 lora;
+    font-weight: 400;
+  }
+  p {
+    font: normal 1.5em / 1.7em roboto;
+    font-weight: 100;
+  }
+  h2,
+  h3 {
+    margin: 0 0 5px 0;
+  }
+  a {
+    color: #808080;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+  a:hover {
+    color: #62a544;
+  }
+  .textos-claro p {
+    color: #ffffff;
+  }
+  .textos-claro h2 {
+    color: #ffffff;
+  }
+  .textos-claro ul {
+    margin: 0;
+  }
+  .textos-claro ul li {
+    font: normal 1.5em / 1.8em roboto;
+    font-weight: 100;
+    color: #ffffff;
+    list-style: none;
+    margin-bottom: 20px !important;
+  }
+  .textos-claro ul li i {
+    color: #62a544;
+  }
+  .textos-oscuro p {
+    color: #4d4d4d;
+  }
+  .textos-oscuro h2 {
+    margin-bottom: 10px;
+    color: #4d4d4d;
+    padding-bottom: 10px;
+  }
+  .textos-oscuro ul {
+    margin: 0;
+  }
+  .textos-oscuro ul li {
+    font: normal 1.5em / 1.8em roboto;
+    font-weight: 300;
+    color: #4d4d4d;
+    list-style: none;
+    margin-bottom: 20px !important;
+    display: inline;
+  }
+  .textos-oscuro ul li i {
+    color: #62a544;
   }
 }
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
