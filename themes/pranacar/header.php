@@ -31,26 +31,27 @@
 	<div class="container">
 
 		<header>
-			<div class="clearfix full">
-				<div class="block center columna large-10">
-					<h1 class="columna xmall-6 medium-3 large-2">
+				<div class="clearfix block center width">
+					<h1 class="block columna xmall-4 medium-3 large-2">
 						<a href="index.html">
 							<img src="<?php echo THEMEPATH; ?>images/logo-pranacar-organics-typo.png" alt="">
 						</a>
 					</h1>
 
-					<nav class="columna no-medium large-8 large right">	
+					<div class="columna xmall-8 medium-9 right" id="btn-movil">
+						<a href="#"><i class="fa fa-bars fa-2x"></i></a>
+					</div>
+
+					<div class="clear-small"></div>
+
+					<nav class="columna xmall-12 medium-12 large-9 block menu clearfix">
 						<a href="about.html">Acerca</a><a class="" href="#historia">
 						Nuestra historia</a><a href="">
 						¿Qué ofrecemos?</a><a href="">
 						Capacidades</a><a href="">
-						Contacto</a>
-					<div class="right"><a href="">
-						Eng</a><a href="">
-						Esp</a>
+						Contacto</a>				
 					</nav>
 				</div>	
-			<div>
 		</header>
 
 		<div class="clearfix">

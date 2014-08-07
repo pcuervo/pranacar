@@ -177,7 +177,7 @@ figure {margin: 0;}
 
 //layout
 .container{ min-width: 300px; }
-.width{ width: 90%; min-width: 300px;  margin: 0 auto @margen auto; }
+.width{ width: 90%; min-width: 300px;  margin: 0  auto; }
 .full{ width: 100%;
   //img{ width: 100%; height: auto; }
 }
@@ -246,7 +246,7 @@ body{ background: #fff;}
 }
 
 h1{
-	.font(2em, 2.5em, 600); padding-top: @margen;
+	.font(2em, 0em, 600);
 }
 
 h2{ .font(2em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
@@ -261,7 +261,7 @@ h2, h3{
 	margin: 0 0 (@margen/4) 0;
 }
 
-a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
+a{color:lighten(@oscuro,50%); text-decoration: none; 
 	&:hover{color: @highlight;}
 }
 
@@ -291,21 +291,29 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 
 
 /*** HEADER ***/
-header { background: @claro;
-	.menu{padding-top: @margen;
+
+header{ padding: @margen 0;
+
+	> div{ position: relative; }
+
+	h1{
+		a{
+			img{ }
+		}
 	}
 
-	nav{ margin: @margen; position:relative; width: 100%;
-		 display: inline-block; padding-top: @margen;  vertical-align: middle; .transition(all 0.8s ease); text-align: center;
-			
-			a { width: auto; margin-right: @margen; border-top: solid 3px @claro; float:left; text-decoration: none; .transition;  white-space: nowrap; vertical-align: middle;.font(1em, 1.5em, 300); 
-				&:hover{ border-top: solid 3px @highlight;}
-			}
-			div{width:16%;
-				a{width: auto;}
-			}	
+	nav{ padding-top: 5%; width: 100%;
+		a{ width: 100%; display: block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.5em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro;
+			&:hover, &.active{ border-top: 2px solid @highlight; }
+		}
+	}
+	#btn-movil{
+		a{
+			float: right;
+		}
 	}
 }
+
 
 .active{
 	border-top: solid 3px #ffc600;
@@ -334,7 +342,7 @@ header { background: @claro;
 	}
  }
 
- .cover{ margin-bottom: @margen; background: no-repeat @highlight fixed center; background-size: cover;
+ .cover{background: no-repeat @claro fixed center; background-size: cover;
 	&.intro{ background-image: url('images/intro.jpg') }
 	&.somos{ background-image: url('images/somos-2.jpg') }
 	&.acerca{ background-image: url('images/acerca.jpg') } 
@@ -348,7 +356,9 @@ header { background: @claro;
 .intro{ padding: (@margen*4) 0;
 	img{width: 100%;}
 	ul{
-		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center;}
+		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center;
+			a{.transition(all .5s ease);}
+		}
 	}
 }
 
@@ -362,6 +372,7 @@ header { background: @claro;
 }
 
 .historia{ adding-top: (@margen*4);
+	a{.transition(all .5s ease);}
 }
 
 .fabricantes{ padding: (@margen*4) 0;
@@ -372,7 +383,7 @@ header { background: @claro;
 }
 
 .capacidades{ padding-top: (@margen*4);
-	.icono{ text-align: center; display: inline-block; width: 100%;
+	.icono{ text-align: center; display: inline-block; width: 100%; vertical-align: middle;
 		.fa-inverse{color: @claro;} 
 		i{color: @highlight; text-align: center;}
 	}
@@ -505,6 +516,8 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 
 	//========================//
 
+	.clear-small { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
 }
 
 /* min-width 641px, medium screens */
@@ -548,11 +561,8 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 	//========================//
 
 	/*General*/
-	h1{
-		.font(2em, 2.5em, 600); padding-top: @margen;
-	}
 
-	h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
+	h2{ .font(2.5em, 0em, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
 
 	h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
 
@@ -564,8 +574,7 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 		margin: 0 0 (@margen/4) 0;
 	}
 
-	a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
-		&:hover{color: @highlight;}
+	a{color:lighten(@oscuro,50%); text-decoration: none;		&:hover{color: @highlight;}
 	}
 
 	.textos-claro{
@@ -592,16 +601,35 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 		}
 	}
 
+	/**HEADER**/
+
+	header{ padding: @margen 0;
+
+	> div{ position: relative; }
+
+	h1{
+		a{
+			img{ }
+		}
+	}
+
+	nav{ padding-top: 5%; width: 100%;
+		a{ width: 20%; display: inline-block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.2em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro;
+			&:hover, &.active{ border-top: 2px solid @highlight; }
+		}
+	}
+
+	#btn-movil{
+		a{
+			float: right;
+		}
+	}
+}
 	/*MAIN*/
 
-	.capacidades{ padding-top: (@margen*4);
-		.icono{ display: inline-block; text-align: center;  width: 50%;
-			.fa-inverse{color: @claro;} 
-			i{color: @highlight; text-align: center;}
+		.capacidades{
+			.icono{ display: inline-block; width: 50%;}
 		}
-		h2{margin-bottom: (@margen*4); text-align: center;}
-		p{padding: @margen;}
-	}
 }
 
 
@@ -652,9 +680,35 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 
 	//========================//
 
+	/**HEADER**/
+
+	header{ padding: @margen 0;
+
+		> div{ position: relative; }
+
+		h1{
+			a{
+				img{ }
+			}
+		}
+
+		nav{ padding-top: 0; width: 100%;
+			a{ width: 15%; display: inline-block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.2em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro; float: right;
+				&:hover, &.active{ border-top: 2px solid @highlight; }
+			}
+		}
+
+		#btn-movil{display: none;}
+	}
+
+	
+
 	/*General*/
+
+	.clear-small { display: none; }
+
 	h1{
-		.font(2em, 2.5em, 600); padding-top: @margen;
+		.font(2em, 0em, 600);
 	}
 
 	h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}

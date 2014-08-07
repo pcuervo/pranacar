@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-	<section class="clearfix intro cover"><!--intro-->
-		<div class="width">
+	<section class="intro cover"><!--intro-->
+		<div class="clearfix width">
 	 		<img class="columna xmall-4 medium-4 large-2 block center margin-bottom" src="<?php echo THEMEPATH; ?>images/logo-pranacar-organics.png" alt="">
 
 	 		<div class="clear"></div>
@@ -22,24 +22,24 @@
 
 	 	<div class="clear"></div>	
 	 	
- 		<div class="center block span xmall-6 medium-10 large-4 sub-menu">
+ 		<div class="clearfix center block span xmall-6 medium-10 large-4 sub-menu">
 
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">Catálogo</a>
+ 				<a class="block center columna xmall-10 medium-10 large-12" href="">Catálogo</a>
  			</div>
 
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">Contacto</a>
+ 				<a class="block center columna xmall-10 medium-10 large-12" href="">Contacto</a>
  			</div>
 
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">English</a>
+ 				<a class="block center columna xmall-10 medium-10 large-12" href="">English</a>
  			</div>
  		</div>
 
 	 </section><!--intro-->
 
-	 <section class="clearfix somos cover"><!--somos-->
+	 <section class="somos cover"><!--somos-->
 			<div class="width textos-claro">
 				<?php
 				$coverArgs = array(
@@ -58,7 +58,7 @@
 
 	 </section><!--somos-->
 
-	 <section class="clearfix acerca cover"><!--acerca-->
+	 <section class="acerca cover"><!--acerca-->
 		<div class="width block textos-oscuro fondo-entero">
 			<div id="acerca" class="center block text-center columna xmall-10 large-8  margin-bottom">
 				<?php
@@ -99,7 +99,7 @@
 	 	</div>
 	 </section><!--acerca-->
 
-	 <section class="clearfix historia cover"><!--historia-->
+	 <section class="historia cover"><!--historia-->
 		<div class="width block textos-oscuro fondo-entero">
 
 			<div id="historia" class=" center block columna xmall-8 margin-bottom sub-menu">
@@ -132,7 +132,7 @@
 		 </div>
 	</section><!--Fabricantes-->
 
-	<section class="clearfix clientes cover"><!--clientes-->
+	<section class="clientes cover"><!--clientes-->
 		<div id="fabricantes" class="width block center textos-oscuro">
 		 	<div class="center block columna xmall-10 medium-10 large-8 ">
 		 		<h2>A los clientes</h2>
@@ -141,57 +141,48 @@
 	 	</div>
 	 </section><!--clientes-->
 
-	  <section class="clearfix capacidades cover"><!--capacidades-->
-		<div class="width block center textos-oscuro">
-			<div id="capacidades" class=" center block columna xmall-12 medium-10 margin-bottom">
+	  <section class="cover"><!--capacidades-->
+		<div class="width clearfix textos-oscuro">
+			<div id="capacidades" class="capacidades center block columna xmall-12 margin-bottom">
 				<h2>Nuestras capacidades</h2>
 
-				<div class="block icono">
-				<span class="fa-stack fa-lg fa-3x">
-				  <i class="fa fa-circle fa-stack-2x"></i>
-				  <i class="fa fa-barcode fa-stack-1x fa-inverse"></i>
-				</span>
+				<div class="icono">
+					<span class="fa-stack fa-lg fa-3x">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-barcode fa-stack-1x fa-inverse"></i>
+					</span>
 					<p>Atender más de 1000 puntos de venta en México, EEUU y Canadá.</p>
-				</div>
-				
-				<div class="block  icono">
+				</div><div class="icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
 					  <i class="fa fa-file fa-stack-1x fa-inverse"></i>
 					</span>
 					<p>Gestión de los trámites legales de importación y exportación.</p>
-				</div>
-
-				<div class="block  icono">
+				</div><div class="icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
 					  <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
 					</span>
 					<p>Lograr una eficiencia total en logística y distribución.</p>
-				</div>
-
-				<div class="block  icono">
+				</div><div class="icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
 					  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
 					</span>
 					<p>Atención personalizada a todos nuestros proveedores y clientes.</p>
-				</div>
-				
-				<div class="block icono">
+				</div><div class="icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
 					  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
 					</span>
 					<p>Volúmenes por ítem que permiten a economías de escala asegurar competitividad en precios.</p>
-
 				</div>
 			</div>
 		</div>
 	 </section><!--capacidades-->
 
-	  <section class="clearfix productos cover"><!--productos-->
-		<div class="width block center">
+	  <section class="productos cover"><!--productos-->
+		<div class="clearfix width block center">
 
 			<div id="productos" class="center block columna xmall-11 textos-claro caja">
 				<h2>Nuestros Productos</h2>
@@ -219,8 +210,8 @@
 		</div>
 	 </section><!--productos-->
 
-	 <section class="clearfix contacto"><!--productos-->
-		<div class="width block center fondo-entero">
+	 <section class="contacto"><!--conacto-->
+		<div class="width clearfix">
 
 			<div id="contacto" class="columna xmall-12 medium-6 large-6 margin-bottom textos-oscuro">
 				<h2>Contacto</h2>
@@ -246,7 +237,7 @@
 				</fieldset>  
 			</div>
 		</div>
-	 </section><!--productos-->
+	 </section><!--contacto-->
 	 <div class="scroll-top-wrapper width">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">
 	        <i class="right fa fa-2x fa-arrow-circle-up"></i>
