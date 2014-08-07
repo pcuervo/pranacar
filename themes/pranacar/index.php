@@ -42,7 +42,19 @@
 
 	 <section class="clearfix somos"><!--somos-->
 			<div class="width textos-claro">
-	 			<h2 class="center block columna xmall-10">Somos una empresa dedicada al comercio internacional de productos enfocados en el bienestar humano.</h2>
+				<?php
+				$coverArgs = array(
+					'post_type' 	=> 'acerca-de', 
+					'category_name' => 'cover',
+					'posts_per_page'	=> 1
+				);
+				$coverQuery = new WP_Query($coverArgs);
+
+				if( $coverQuery->have_posts() ) : $coverQuery->the_post();
+				?>
+					<h2 class="center block columna xmall-10"><?php the_content();?></h2>
+				<?php		
+				endif;  wp_reset_query();?>
 	 		</div>
 
 	 </section><!--somos-->
@@ -50,21 +62,41 @@
 	 <section class="clearfix acerca"><!--acerca-->
 		<div class="width block textos-oscuro fondo-entero">
 			<div id="acerca" class="center block text-center columna xmall-10 large-8  margin-bottom">
-				<h2>¿Qué hacemos?</h2>
-		 		<p>Nos especializamos en la importación y exportación de productos orgánicos, naturales y artesanales entre México, Estados Unidos y Canadá. Buscamos ser siempre la mejor solución para los productores, clientes, distribuidores y cadenas comerciales.</p>
+				<?php
+				$hacemosArgs = array(
+					'post_type' 	=> 'acerca-de', 
+					'category_name' => 'que-hacemos',
+					'posts_per_page'	=> 1
+				);
+				$hacemosQuery = new WP_Query($hacemosArgs);
+
+				if( $hacemosQuery->have_posts() ) : $hacemosQuery->the_post();
+				?>
+					<h2><?php the_title() ?></h2>
+			 		<p><?php the_content() ?></p>
+				<?php		
+				endif;  wp_reset_query();?>
 		 	</div>
 
 		 	<div class="columna large-8 center block">
-			 	<div class="columna xmall-6 text-center">
-			 		<h2>Misión</h2>
-			 		<p>Ser la opción de distribución y comercialización de productos saludables, orgánicos y naturales más confiable y eficiente de Centro y Norte América.</p>
-			 	</div>
+		 		<?php
+				$misionVisionArgs = array(
+					'post_type' 	=> 'acerca-de', 
+					'category_name' => 'mision-vision',
+					'posts_per_page'	=> 2
+				);
+				$misionVisionQuery = new WP_Query($misionVisionArgs);
 
-			 	<div class="columna xmall-6 text-center">
-			 		<h2>Visión</h2>
-			 		<p>Dar a nuestros clientes la oportunidad de elevar su bienestar a través de una alimentación y un estilo de vida saludable.</p>
-		 		</div>
+				if( $misionVisionQuery->have_posts() ) : while( $misionVisionQuery->have_posts() ) : $misionVisionQuery->the_post();
+				?>
+					<div class="columna xmall-6 text-center">
+						<h2><?php the_title() ?></h2>
+				 		<p><?php the_content() ?></p>
+			 		</div>
+				<?php		
+				endwhile; endif;  wp_reset_query();?>
 		 	</div>	
+
 	 	</div>
 	 </section><!--acerca-->
 
@@ -72,13 +104,19 @@
 		<div class="width block textos-oscuro fondo-entero">
 
 			<div id="historia" class=" center block columna xmall-8 margin-bottom sub-menu">
-				<h2>Historia</h2>
+				<?php
+				$historiaArgs = array(
+					'post_type' 	=> 'historia', 
+					'posts_per_page'	=> 1
+				);
+				$historiaQuery = new WP_Query($historiaArgs);
 
-		 		<p>Nuestro grupo de empresas empezó en el 2004 suministrando productos de necesidad básica para los programas sociales del Gobierno Mexicano. Desde entonces, nuestro grupo se ha convertido en una de las empresas pioneras en la industria de distribución de alimentos.</p>
-
-		 		<p>Como parte de nuestra estrategia, nuestro grupo también empezó a distribuir productos de Salud al sector público, basándose principalmente en farmacias y consumidores de medicamentos. Debido a la experiencia en distribución que hemos adquirido a lo largo de los años, nuestro grupo actualmente cubre una gran parte de las necesidades de México en cuanto a sector de salud pública se refiere, por medio de la integración de sus operaciones: desde compras, logística, distribución y sistemas de control hasta el cliente o beneficiario final.</p>
-
-		 		<p>Al darnos cuenta de la alta demanda de productos Mexicanos en Estados Unidos y nuestro interés en promover y desarrollar nuestros productos nacionales, Pranacar (una de las divisiones del grupo) se creó en el 2010 para distribuir productos naturales, orgánicos y artesanales en los países de NAFTA con el objetivo principal de llegar a ser una de las principales plataformas de importación y exportación dentro de esta categoría de productos.</p>
+				if( $historiaQuery->have_posts() ) : $historiaQuery->the_post();
+				?>
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_content(); ?>
+				<?php		
+				endif;  wp_reset_query();?>
 
 		 		<h2 class="text-center margin-bottom">¿Dudas?</h2>
 		 		<a class="center block columna xmall-3 margin-bottom" href="">Contáctanos</a>
