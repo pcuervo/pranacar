@@ -37,6 +37,7 @@
 		);
 		register_post_type( 'catalogo', $args );
 
+
 		// NUESTRAS CAPACIDADES
 		$labels = array(
 			'name'          => 'Nuestras Capacidades',
