@@ -27,15 +27,15 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'catalogo' ),
+			'rewrite'            => array( 'slug' => 'catalogo-pt' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'taxonomies'         => array( 'category' ),
+			'taxonomies'         => array( 'catalogo-pt' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'catalogo', $args );
+		register_post_type( 'catalogo-pt', $args );
 
 
 		// NUESTRAS CAPACIDADES
