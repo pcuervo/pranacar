@@ -126,7 +126,7 @@
 	 <section class="clearfix fabricantes"><!--fabricantes-->
 		<div id="fabricantes" class="width block center textos-claro fondo-entero">
 			<div class=" center block columna xmall-8 margin-bottom">
-				<h2>A los fabricantes?</h2>
+				<h2>A los fabricantes</h2>
 		 		<p>Por medio de una relación cercana con los fabricantes (seleccionados con una metodología enfocada en cumplimiento de estándares de calidad, certificado de los productos y tiempos de entrega), logramos entender sus volúmenes y capacidades para así colocar sus productos en los puntos de venta con más demanda para estos. Dando así, la oportunidad de comercialización, desarrollo y crecimiento al fabricante.</p>
 		 	</div>
 		 </div>
