@@ -9,18 +9,18 @@
 	function custom_taxonomies_callback(){
 
 		// Catálogo
-		if( ! taxonomy_exists('catalogo')){
+		if( ! taxonomy_exists('tax-catalogo')){
 
 			$labels = array(
-				'name'              => 'Catálogo',
-				'singular_name'     => 'Catálogo',
+				'name'              => 'Categoría catálogo',
+				'singular_name'     => 'Categoría catálogo',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Catálogo',
-				'update_item'       => 'Actualizar Catálogo',
-				'add_new_item'      => 'Nuevo Catálogo',
-				'new_item_name'     => 'Nombre Nuevo Catálogo',
-				'menu_name'         => 'Catálogo'
+				'edit_item'         => 'Editar Categoría catálogo',
+				'update_item'       => 'Actualizar Categoría catálogo',
+				'add_new_item'      => 'Nuevo Categoría catálogo',
+				'new_item_name'     => 'Nombre Nuevo Categoría catálogo',
+				'menu_name'         => 'Categoría catálogo'
 			);
 
 			$args = array(
@@ -30,10 +30,10 @@
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'catalogo' ),
+				'rewrite'           => array( 'slug' => 'tax-catalogo' ),
 			);
 
-			register_taxonomy( 'catalogo', 'catalogo', $args );
+			register_taxonomy( 'tax-catalogo', 'catalogo-pt', $args );
 		}
 
 
