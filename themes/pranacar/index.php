@@ -274,10 +274,10 @@
 					<?php } else { ?>
 						<label class="columna xmall-12" for="nombre">Name:</label>
 					<?php } ?>
-			        <input class="columna xmall-12" type="text" id="nombre" placeholder="Nombre completo" required/>
+			        <input class="columna xmall-12" type="text" id="nombre" required/>
 
 			        <label class="columna xmall-12" for="email">E-mail:</label>
-			        <input class="columna xmall-12" type="email" id="email" placeholder="nombre@ejemplo.com" required/>
+			        <input class="columna xmall-12" type="email" id="email" required/>
 
 					<?php if (qtrans_getLanguage() == 'es'){ ?>
 		 				<label class="columna xmall-12" for="msg">Mensaje:</label>
@@ -285,7 +285,7 @@
 						<label class="columna xmall-12" for="msg">Message:</label>
 					<?php } ?>
 
-			        <textarea class="columna xmall-12" id="msg" placeholder="Escribe aquí tu comentario." required></textarea>
+			        <textarea class="columna xmall-12" id="msg" required></textarea>
 				</fieldset>
 			</div>
 		</div>
@@ -294,9 +294,9 @@
 	 <section class="gmap full" id="mapa">
 
 	 </section>
-	 <div class="scroll-top-wrapper width">
+	<!--  <div class="scroll-top-wrapper width">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">
 	        <i class="right fa fa-2x fa-arrow-circle-up"></i>
 	    </span>
-	</div>
+	</div> -->
 <?php get_footer(); ?>
