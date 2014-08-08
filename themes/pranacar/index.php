@@ -237,8 +237,9 @@
 			</div>
 		</div>
 	 </section><!--contacto-->
-	 <section class="gmap full">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.1568713983697!2d-99.24043789999993!3d19.4056269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201735ccbb933%3A0xe8000e5f6405a4fb!2sPaseo+de+Los+Tamarindos+90%2C+Bosques+de+Las+Lomas%2C+Cuajimalpa+de+Morelos%2C+05120+Ciudad+de+M%C3%A9xico%2C+D.F.%2C+M%C3%A9xico!5e0!3m2!1ses!2s!4v1407442164070" frameborder="0" style="border:0"></iframe>
+	 <!-- 19.405607, -99.240459 -->
+	 <section class="gmap full" id="mapa">
+		
 	 </section>
 	 <div class="scroll-top-wrapper width">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">
