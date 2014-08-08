@@ -667,7 +667,7 @@ header #btn-movil a {
   text-align: center;
 }
 .capacidades h2 {
-  margin-bottom: 80px;
+  margin-bottom: 80px !important;
   text-align: center;
 }
 .capacidades p {
@@ -677,8 +677,8 @@ header #btn-movil a {
   padding: 80px 0;
 }
 .productos h2 {
-  margin-bottom: 20px !important;
-  padding: 0 20px;
+  margin-bottom: 60px !important;
+  padding: 40px;
 }
 .productos .caja {
   background: rgba(0, 0, 0, 0.4);
@@ -1268,6 +1268,11 @@ footer i {
   }
   .textos-oscuro ul li i {
     color: #62a544;
+  }
+  /*MAIN*/
+  .capacidades .icono {
+    display: inline-block;
+    width: 33%;
   }
 }
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */

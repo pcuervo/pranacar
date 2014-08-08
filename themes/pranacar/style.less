@@ -382,17 +382,17 @@ header{ padding: @margen 0;
 .clientes{ padding: (@margen*4) 0;
 }
 
-.capacidades{ padding-top: (@margen*4);
+.capacidades{ padding-top: (@margen*4); 
 	.icono{ text-align: center; display: inline-block; width: 100%; vertical-align: middle;
 		.fa-inverse{color: @claro;} 
 		i{color: @highlight; text-align: center;}
 	}
-	h2{margin-bottom: (@margen*4); text-align: center;}
+	h2{margin-bottom: (@margen*4) !important; text-align: center;}
 	p{padding: @margen;}
 }
 
 .productos{ padding: (@margen*4) 0;
-	h2{.margin-bottom; padding: 0 @margen;}
+	h2{margin-bottom: (@margen*3) !important;; padding: @margen*2;}
 	.caja{background: rgba(0, 0, 0, .4); padding: @margen;
 		ul{
 			li{
@@ -750,6 +750,12 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 			}
 		}
 	}
+
+	/*MAIN*/
+
+		.capacidades{
+			.icono{ display: inline-block; width: 33%;}
+		}
 }
 
 
