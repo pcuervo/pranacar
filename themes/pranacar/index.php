@@ -10,18 +10,34 @@
 	 			data-cycle-timeout="3000"
 	 			data-cycle-slides="> li"
 	 		>
-				<li class="center block columna xmall-12">Enfocados en el bienestar humano</li>
-				<li class="center block columna xmall-12">Variedad y calidad</li>
-				<li class="center block columna xmall-12">Eficiencia total en logística y distribución</li>
+	 			<?php if (qtrans_getLanguage() == 'es'){ ?>
+					<li class="center block columna xmall-12">Enfocados en el bienestar humano</li>
+					<li class="center block columna xmall-12">Variedad y calidad</li>
+					<li class="center block columna xmall-12">Eficiencia total en logística y distribución</li>
+				<?php } else { ?>
+					<li class="center block columna xmall-12">Focused on Well-being of People</li>
+					<li class="center block columna xmall-12">Variety and Quality</li>
+					<li class="center block columna xmall-12">Reliable and Efficient Option</li>
+				<?php } ?>
 			</ul>
 	 	</div>
 	 	<div class="clear"></div>
  		<div class="clearfix center block span xmall-6 medium-10 large-4 sub-menu">
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catálogo</a>
+ 				<?php if (qtrans_getLanguage() == 'es'){ ?>
+ 					<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catálogo</a>
+ 				<?php } else { ?>
+					<a href="<?php echo site_url('catalogo/?lang=en'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catalog</a>
+				<?php } ?>
  			</div>
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a data-seccion="contacto" class="block center columna xmall-10 medium-10 large-12 contacto" href="">Contacto</a>
+ 				<a data-seccion="contacto" class="block center columna xmall-10 medium-10 large-12 contacto" href="">
+				<?php if (qtrans_getLanguage() == 'es'){ ?>
+ 					Contacto
+				<?php } else { ?>
+					Contact
+				<?php } ?>
+ 				</a>
  			</div>
  			<div class="columna xmall-12 medium-4 large-4">
  				<?php if (qtrans_getLanguage() == 'es'){ ?>
@@ -112,8 +128,20 @@
 				<?php
 				endif;  wp_reset_query();?>
 
-		 		<h2 class="text-center margin-bottom">¿Dudas?</h2>
-		 		<a class="center block columna xmall-8 medium-5 large-3 margin-bottom" href="">Contáctanos</a>
+		 		<h2 class="text-center margin-bottom">
+		 		<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			¿Dudas?
+				<?php } else { ?>
+					Questions?
+				<?php } ?>
+		 		</h2>
+		 		<a class="center block columna xmall-8 medium-5 large-3 margin-bottom" href="">
+		 		<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			Contáctanos
+				<?php } else { ?>
+					Contact us
+				<?php } ?>
+				</a>
 	 		</div>
 	 	</p></div>
 	 </section><!--historia-->
@@ -163,7 +191,11 @@
 	  <section id="capacidades" class="cover"><!--capacidades-->
 		<div class="width clearfix textos-oscuro">
 			<div id="capacidades" class="capacidades center block columna xmall-12 margin-bottom">
-				<h2>Nuestras capacidades</h2>
+				<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			<h2>Nuestras capacidades</h2>
+				<?php } else { ?>
+					<h2>Our Capabilities</h2>
+				<?php } ?>
 				<?php
 				$capacidadesArgs = array(
 					'post_type' 		=> 'nuestras-capacidades',
@@ -190,7 +222,11 @@
 		<div class="clearfix width block center">
 
 			<div id="productos" class="center block columna xmall-11 textos-claro caja">
-				<h2>Nuestros Productos</h2>
+				<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			<h2>Nuestros Productos</h2>
+				<?php } else { ?>
+					<h2>Our products</h2>
+				<?php } ?>
 				<ul class="clearfix margin-bottom">
 				<?php
 				$counterProductos = 1;
@@ -213,7 +249,11 @@
 	 <section id="contacto" class="contacto"><!--conacto-->
 		<div class="width clearfix">
 			<div id="contacto" class="columna xmall-12 medium-6 large-6 margin-bottom textos-oscuro">
-				<h2>Contacto</h2>
+				<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			<h2>Contacto</h2>
+				<?php } else { ?>
+					<h2>Contact</h2>
+				<?php } ?>
 				<p>Paseo de los tamarindos 90</p>
 				<p>Torre 1 . Piso 17</p>
 				<p>Col. Bosques de las lomas</p>
@@ -222,24 +262,37 @@
 			</div>
 
 			<div class="columna xmall-12 medium-6 large-6 margin-bottom textos-oscuro">
-				<h2>Déjanos tus datos</h2>
+				<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 			<h2>Déjanos tus datos</h2>
+				<?php } else { ?>
+					<h2>Contact us</h2>
+				<?php } ?>
 				<form  action="" method="post">
 				<fieldset class="margin-bottom">
-				        <label class="columna xmall-12" for="nombre">Nombre:</label>
-				        <input class="columna xmall-12" type="text" id="nombre" placeholder="Nombre completo" required/>
+					<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 				<label class="columna xmall-12" for="nombre">Nombre:</label>
+					<?php } else { ?>
+						<label class="columna xmall-12" for="nombre">Name:</label>
+					<?php } ?>
+			        <input class="columna xmall-12" type="text" id="nombre" placeholder="Nombre completo" required/>
 
-				        <label class="columna xmall-12" for="email">E-mail:</label>
-				        <input class="columna xmall-12" type="email" id="email" placeholder="nombre@ejemplo.com" required/>
+			        <label class="columna xmall-12" for="email">E-mail:</label>
+			        <input class="columna xmall-12" type="email" id="email" placeholder="nombre@ejemplo.com" required/>
 
-				        <label class="columna xmall-12" for="msg">Mensaje:</label>
-				        <textarea class="columna xmall-12" id="msg" placeholder="Escribe aquí tu comentario." required></textarea>
+					<?php if (qtrans_getLanguage() == 'es'){ ?>
+		 				<label class="columna xmall-12" for="msg">Mensaje:</label>
+					<?php } else { ?>
+						<label class="columna xmall-12" for="msg">Message:</label>
+					<?php } ?>
+
+			        <textarea class="columna xmall-12" id="msg" placeholder="Escribe aquí tu comentario." required></textarea>
 				</fieldset>
 			</div>
 		</div>
 	 </section><!--contacto-->
 	 <!-- 19.405607, -99.240459 -->
 	 <section class="gmap full" id="mapa">
-		
+
 	 </section>
 	 <div class="scroll-top-wrapper width">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">

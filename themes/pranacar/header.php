@@ -43,11 +43,37 @@
 					</div>
 					<div class="clear-small"></div>
 					<nav class="columna xmall-12 medium-12 large-10 menu clearfix">
-						<a data-seccion="acerca-de" href="#">Acerca de</a><a data-seccion="nuestra-historia" class="" href="#historia">
-						Nuestra historia</a><a data-seccion="que-ofrecemos" href="#">
-						¿Qué ofrecemos?</a><a data-seccion="capacidades" href="#">
-						Capacidades</a><a data-seccion="contacto" href="#">
-						Contacto</a>
+						<a data-seccion="acerca-de" href="#">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+				 				Acerca de
+							<?php } else { ?>
+								About us
+							<?php } ?>
+						</a><a data-seccion="nuestra-historia" class="" href="#historia">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+				 				Nuestra historia
+							<?php } else { ?>
+								Our Story
+							<?php } ?>
+						</a><a data-seccion="que-ofrecemos" href="#">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+				 				¿Qué ofrecemos?
+							<?php } else { ?>
+								Our Services
+							<?php } ?>
+						</a><a data-seccion="capacidades" href="#">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+				 				Capacidades
+							<?php } else { ?>
+								Our Capabilities
+							<?php } ?>
+						</a><a data-seccion="contacto" href="#">
+							<?php if (qtrans_getLanguage() == 'es'){ ?>
+				 				Contacto
+							<?php } else { ?>
+								Contact Us
+							<?php } ?>
+						</a>
 					</nav>
 				</div>
 			</div>
