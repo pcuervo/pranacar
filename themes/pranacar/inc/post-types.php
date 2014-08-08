@@ -161,4 +161,35 @@
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
 		register_post_type( 'acerca-de', $args );
+
+		// NUESTROS PRODUCTOS
+		$labels = array(
+			'name'          => 'Nuestros productos',
+			'singular_name' => 'Nuestros productos',
+			'add_new'       => 'Nueva entrada Nuestros productos',
+			'add_new_item'  => 'Nueva entrada Nuestros productos',
+			'edit_item'     => 'Editar Nuestros productos',
+			'new_item'      => 'Nueva entrada Nuestros productos',
+			'all_items'     => 'Todas',
+			'view_item'     => 'Ver Nuestros productos',
+			'search_items'  => 'Buscar Nuestros productos',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Nuestros productos'
+		);
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'nuestros-productos' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'taxonomies'         => array( 'category' ),
+			'supports'           => array( 'title', 'editor', 'thumbnail' )
+		);
+		register_post_type( 'nuestros-productos', $args );
 	});

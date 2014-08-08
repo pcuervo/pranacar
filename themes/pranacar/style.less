@@ -177,7 +177,7 @@ figure {margin: 0;}
 
 //layout
 .container{ min-width: 300px; }
-.width{ width: 90%; min-width: 300px;  margin: 0 auto @margen auto; }
+.width{ width: 90%; min-width: 300px;  margin: 0  auto; }
 .full{ width: 100%;
   //img{ width: 100%; height: auto; }
 }
@@ -241,15 +241,17 @@ p{ margin-bottom: 1em; }
 
 body{ background: #fff;}
 
-.logo{ margin-top: (@margen*1.5); }
+.logo{
+	margin-top: (@margen*1.5);
+}
 
-h1{ .font(2em, 2.5em, 600); padding-top: @margen; }
+h1{ }
 h2{ .font(2em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
 h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
 p{ .font(1em, 1.7em, 100, ~'normal', ~'roboto');}
 h2, h3{ margin: 0 0 (@margen/4) 0; }
 
-a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
+a{color:lighten(@oscuro,50%); text-decoration: none;
 	&:hover{color: @highlight;}
 }
 
@@ -284,19 +286,17 @@ a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 
 
 /*** HEADER ***/
-header { background: @claro;
-	.menu{padding-top: @margen;
+
+header{ padding: @margen 0;
+
+	> div{ position: relative; }
+	nav{ display: none; padding-top: 5%; width: 100%;
+		a{ width: 100%; display: block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.5em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro;
+			&:hover, &.active{ border-top: 2px solid @highlight; }
+		}
 	}
-
-	nav{ margin: @margen; position:relative; width: 100%;
-		 display: inline-block; padding-top: @margen;  vertical-align: middle; .transition(all 0.8s ease); text-align: center;
-
-			a { width: auto; margin-right: @margen; border-top: solid 3px @claro; float:left; text-decoration: none; .transition;  white-space: nowrap; vertical-align: middle;.font(1em, 1.5em, 300);
-				&:hover{ border-top: solid 3px @highlight;}
-			}
-			div{width:16%;
-				a{width: auto;}
-			}
+	#btn-movil{
+		a{ float: right; }
 	}
 }
 
@@ -327,7 +327,7 @@ header { background: @claro;
 	}
  }
 
- .cover{ margin-bottom: @margen; background: no-repeat @highlight fixed center; background-size: cover;
+ .cover{background: no-repeat @claro fixed center; background-size: cover;
 	&.intro{ background-image: url('images/intro.jpg') }
 	&.somos{ background-image: url('images/somos-2.jpg') }
 	&.acerca{ background-image: url('images/acerca.jpg') }
@@ -341,7 +341,9 @@ header { background: @claro;
 .intro{ padding: (@margen*4) 0;
 	img{width: 100%;}
 	ul{
-		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center;}
+		li{.font(1.5em, 1.5em, 300, ~'normal', ~'roboto'); text-align: center;
+			a{.transition(all .5s ease);}
+		}
 	}
 }
 
@@ -354,7 +356,8 @@ header { background: @claro;
 	p{margin-bottom: (@margen*2)}
 }
 
-.historia{ adding-top: (@margen*4);
+.historia{ padding-top: (@margen*4);
+	a{.transition(all .5s ease);}
 }
 
 .fabricantes{ padding: (@margen*4) 0;
@@ -365,36 +368,33 @@ header { background: @claro;
 }
 
 .capacidades{ padding-top: (@margen*4);
-	.icono{ text-align: center; display: inline-block; width: 100%;
+	.icono{ text-align: center; display: inline-block; width: 100%; vertical-align: middle;
 		.fa-inverse{color: @claro;}
 		i{color: @highlight; text-align: center;}
 	}
-	h2{margin-bottom: (@margen*4); text-align: center;}
+	h2{margin-bottom: (@margen*4) !important; text-align: center;}
 	p{padding: @margen;}
 }
 
 .productos{ padding: (@margen*4) 0;
-	h2{.margin-bottom; padding: 0 @margen;}
+	h2{margin-bottom: (@margen*3) !important;; padding: @margen*2;}
 	.caja{background: rgba(0, 0, 0, .4); padding: @margen;
 		ul{
-			li{
-				padding: 0 @margen;
-			}
+			li{ padding: 0 @margen; }
 		}
 	}
 }
 
 .contacto{background: @claro; background-size: 100%; padding-top: (@margen*4);
-	.fondo-entero{margin-top: 7%; margin-bottom: 39%;
-	}
+	.fondo-entero{margin-top: 7%; margin-bottom: 39%;}
 	h2{.margin-bottom;}
 }
 
  .sub-menu{
- 	a{text-align: center; padding: (@margen/2); border: solid 2px @highlight; border-radius: 3px; margin: (@margen/2); .transition(all 0.5s ease);
+ 	a{text-align: center; padding: (@margen/2); border: solid 2px @highlight; .border-radius; margin: (@margen/2); background: transparent; .transition(all 0.5s ease);
 		.font(1.2em, 1.5em, 300, ~'normal', ~'roboto');
 		&:hover{color: @claro; opacity: 0.8; background: lighten(@highlight,10%); border: solid 2px; border-color: lighten(@highlight,30%);}
- 	};
+ 	}
  }
 
 .contacto {
@@ -498,6 +498,8 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 
 	//========================//
 
+	.clear-small { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
 }
 
 /* min-width 641px, medium screens */
@@ -541,24 +543,13 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 	//========================//
 
 	/*General*/
-	h1{
-		.font(2em, 2.5em, 600); padding-top: @margen;
-	}
 
-	h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
-
+	h2{ .font(2.5em, 0em, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
 	h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
+	h2, h3{ margin: 0 0 (@margen/4) 0; }
+	p{ .font(1.2em, 1.7em, 100, ~'normal', ~'roboto'); }
 
-	p{
-		.font(1.2em, 1.7em, 100, ~'normal', ~'roboto');
-	}
-
-	h2, h3{
-		margin: 0 0 (@margen/4) 0;
-	}
-
-	a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
-		&:hover{color: @highlight;}
+	a{color:lighten(@oscuro,50%); text-decoration: none;		&:hover{color: @highlight;}
 	}
 
 	.textos-claro{
@@ -585,15 +576,32 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 		}
 	}
 
+	/**HEADER**/
+
+	header{ padding: @margen 0;
+		> div{ position: relative; }
+
+		h1{
+			a{
+				img{ }
+			}
+		}
+
+		nav{ padding-top: 3%; width: 100%;
+			a{ width: 20%; display: inline-block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.2em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro;
+				&:hover, &.active{ border-top: 2px solid @highlight; }
+			}
+		}
+
+		#btn-movil{
+			a{ float: right; }
+			i{ font-size: 3em; }
+		}
+	}
 	/*MAIN*/
 
-	.capacidades{ padding-top: (@margen*4);
-		.icono{ display: inline-block; text-align: center;  width: 50%;
-			.fa-inverse{color: @claro;}
-			i{color: @highlight; text-align: center;}
-		}
-		h2{margin-bottom: (@margen*4); text-align: center;}
-		p{padding: @margen;}
+	.capacidades{
+		.icono{ display: inline-block; width: 49%;}
 	}
 }
 
@@ -645,22 +653,30 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 
 	//========================//
 
-	/*General*/
-	h1{
-		.font(2em, 2.5em, 600); padding-top: @margen;
+	/**HEADER**/
+
+	header{ width: 100%; height: 100px; padding: @margen 0; background: @claro; position: fixed;
+		> div{ position: relative; }
+		nav{ display: block !important; padding-top: 0; width: 100%;
+			a{ width: 20%; display: inline-block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.2em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro; float: left;
+				&:hover, &.active{ border-top: 2px solid @highlight; }
+			}
+		}
+		#btn-movil{display: none;}
 	}
+
+	.margen-header{ padding-top: 100px; }
+
+	/*General*/
+
+	.clear-small { display: none; }
 
 	h2{ .font(2.5em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
-
 	h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
-
-	p{
-		.font(1.5em, 1.7em, 100, ~'normal', ~'roboto');
-	}
-
 	h2, h3{
 		margin: 0 0 (@margen/4) 0;
 	}
+	p{ .font(1.5em, 1.7em, 100, ~'normal', ~'roboto'); }
 
 	a{color:lighten(@oscuro,50%); text-decoration: none; .transition(all .5s ease);
 		&:hover{color: @highlight;}
@@ -688,6 +704,12 @@ footer{background: @highlight; padding: (@margen*3); color:@claro;
 				i{color: @highlight;}
 			}
 		}
+	}
+
+	/*MAIN*/
+
+	.capacidades{
+		.icono{ display: inline-block; vertical-align: top; width: 33%;}
 	}
 }
 

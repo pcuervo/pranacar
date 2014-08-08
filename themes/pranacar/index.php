@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-	<section class="clearfix intro cover"><!--intro-->
-		<div class="width">
+	<section class="intro cover"><!--intro-->
+		<div class="clearfix width">
 	 		<img class="columna xmall-4 medium-4 large-2 block center margin-bottom" src="<?php echo THEMEPATH; ?>images/logo-pranacar-organics.png" alt="">
 
 	 		<div class="clear"></div>
@@ -16,21 +16,25 @@
 			</ul>
 	 	</div>
 	 	<div class="clear"></div>
- 		<div class="center block span xmall-6 medium-10 large-4 sub-menu">
+ 		<div class="clearfix center block span xmall-6 medium-10 large-4 sub-menu">
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-10" href="">Catálogo</a>
- 			</div>
- 			<div class="columna xmall-12 medium-4 large-4" data-seccion="contacto">
- 				<a href="" class="block center columna xmall-10 medium-10 large-10" href="">Contacto</a>
+ 				<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catálogo</a>
  			</div>
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a href="<?php echo site_url('?lang=en'); ?>" class="block center columna xmall-10 medium-10 large-10" href="">English</a>
+ 				<a data-seccion="contacto" class="block center columna xmall-10 medium-10 large-12 contacto" href="">Contacto</a>
+ 			</div>
+ 			<div class="columna xmall-12 medium-4 large-4">
+ 				<?php if (qtrans_getLanguage() == 'es'){ ?>
+					<a href="<?php echo site_url('?lang=en'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">English</a>
+				<?php } else { ?>
+					<a href="<?php echo site_url('?lang=es'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Español</a>
+				<?php } ?>
  			</div>
  		</div>
 
 	 </section><!--intro-->
 
-	 <section class="clearfix somos cover"><!--somos-->
+	 <section class="somos cover"><!--somos-->
 			<div class="width textos-claro">
 				<?php
 				$coverArgs = array(
@@ -49,7 +53,7 @@
 
 	 </section><!--somos-->
 
-	 <section class="clearfix acerca cover"><!--acerca-->
+	 <section id="acerca-de" class="acerca cover"><!--acerca-->
 		<div class="width block textos-oscuro fondo-entero">
 			<div id="acerca" class="center block text-center columna xmall-10 large-8  margin-bottom">
 				<?php
@@ -68,7 +72,7 @@
 				endif;  wp_reset_query();?>
 		 	</div>
 
-		 	<div class="columna large-8 center block">
+		 	<div class="columna large-8 center block clearfix">
 		 		<?php
 				$misionVisionArgs = array(
 					'post_type' 	=> 'acerca-de',
@@ -90,10 +94,10 @@
 	 	</div>
 	 </section><!--acerca-->
 
-	 <section class="clearfix historia cover"><!--historia-->
+	 <section id="nuestra-historia" class="historia cover"><!--historia-->
 		<div class="width block textos-oscuro fondo-entero">
 
-			<div id="historia" class=" center block columna xmall-8 margin-bottom sub-menu">
+			<div id="historia" class="center block columna xmall-12 large-8 margin-bottom sub-menu">
 				<?php
 				$historiaArgs = array(
 					'post_type' 	=> 'historia',
@@ -104,16 +108,17 @@
 				if( $historiaQuery->have_posts() ) : $historiaQuery->the_post();
 				?>
 					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?>
+					<p><?php the_content(); ?></p>
 				<?php
 				endif;  wp_reset_query();?>
 
 		 		<h2 class="text-center margin-bottom">¿Dudas?</h2>
 		 		<a class="center block columna xmall-8 medium-5 large-3 margin-bottom" href="">Contáctanos</a>
 	 		</div>
+	 	</p></div>
 	 </section><!--historia-->
 
-	 <section class="clearfix fabricantes cover"><!--fabricantes-->
+	 <section id="que-ofrecemos" class="clearfix fabricantes cover"><!--fabricantes-->
 		<div id="fabricantes" class="width block center textos-claro fondo-entero">
 			<div class=" center block columna xmall-10 medium-10 large-8 margin-bottom">
 				<?php
@@ -134,7 +139,7 @@
 		 </div>
 	</section><!--Fabricantes-->
 
-	<section class="clearfix clientes cover"><!--clientes-->
+	<section class="clientes cover"><!--clientes-->
 		<div id="fabricantes" class="width block center textos-oscuro">
 		 	<div class="center block columna xmall-10 medium-10 large-8 ">
 		 		<?php
@@ -155,20 +160,19 @@
 	 	</div>
 	 </section><!--clientes-->
 
-	  <section class="clearfix capacidades cover"><!--capacidades-->
-		<div class="width block center textos-oscuro">
-			<div id="capacidades" class=" center block columna xmall-12 medium-10 margin-bottom">
+	  <section id="capacidades" class="cover"><!--capacidades-->
+		<div class="width clearfix textos-oscuro">
+			<div id="capacidades" class="capacidades center block columna xmall-12 margin-bottom">
 				<h2>Nuestras capacidades</h2>
+				<?php
+				$capacidadesArgs = array(
+					'post_type' 		=> 'nuestras-capacidades',
+					'posts_per_page'	=> -1
+				);
+				$capacidadesQuery = new WP_Query($capacidadesArgs);
 
-				<div class="block icono">
-					<?php
-					$capacidadesArgs = array(
-						'post_type' 	=> 'nuestras-capacidades',
-						'posts_per_page'	=> -1
-					);
-					$capacidadesQuery = new WP_Query($capacidadesArgs);
-
-					if( $capacidadesQuery->have_posts() ) : $capacidadesQuery->the_post();?>
+				if( $capacidadesQuery->have_posts() ) : while( $capacidadesQuery->have_posts() ) : $capacidadesQuery->the_post();?>
+					<div class="icono">
 						<?php
 							$my_postid = $post->ID;
 							$content_post = get_post($my_postid);
@@ -176,76 +180,38 @@
 							echo $content;
 						?>
 						<p><?php the_title(); ?></p>
-					<?php endif;  wp_reset_query();?>
-				</div>
-
-				<div class="block icono">
-					<span class="fa-stack fa-lg fa-3x">
-					  <i class="fa fa-circle fa-stack-2x"></i>
-					  <i class="fa fa-file fa-stack-1x fa-inverse"></i>
-					</span>
-					<p>Gestión de los trámites legales de importación y exportación.</p>
-				</div>
-
-				<div class="block  icono">
-					<span class="fa-stack fa-lg fa-3x">
-					  <i class="fa fa-circle fa-stack-2x"></i>
-					  <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
-					</span>
-					<p>Lograr una eficiencia total en logística y distribución.</p>
-				</div>
-
-				<div class="block  icono">
-					<span class="fa-stack fa-lg fa-3x">
-					  <i class="fa fa-circle fa-stack-2x"></i>
-					  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-					</span>
-					<p>Atención personalizada a todos nuestros proveedores y clientes.</p>
-				</div>
-
-				<div class="block icono">
-					<span class="fa-stack fa-lg fa-3x">
-					  <i class="fa fa-circle fa-stack-2x"></i>
-					  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-					</span>
-					<p>Volúmenes por ítem que permiten a economías de escala asegurar competitividad en precios.</p>
-
-				</div>
+					</div>
+				<?php endwhile; endif; wp_reset_query();?>
 			</div>
 		</div>
 	 </section><!--capacidades-->
 
-	  <section class="clearfix productos cover"><!--productos-->
-		<div class="width block center">
+	  <section id class="productos cover"><!--productos-->
+		<div class="clearfix width block center">
 
 			<div id="productos" class="center block columna xmall-11 textos-claro caja">
 				<h2>Nuestros Productos</h2>
-				<ul class="center block columna xmall-12 margin-bottom">
-					<li class="columna xmall-12 medium-6 large-6">Productos agrícolas.</li>
-					<li class="columna xmall-12 medium-6 large-6">Botanas y postres saludables.</li>
-
-					<div class="clear"></div>
-					<li class="columna xmall-12 medium-6 large-6">Productos de higiene y cuidado personal.</li>
-					<li class="columna xmall-12 medium-6 large-6">Suplementos alimenticios y vitaminas.</li>
-					<div class="clear"></div>
-					<li class="columna xmall-12 medium-6 large-6">Alimentos básicos.</li>
-					<li class="columna xmall-12 medium-6 large-6">Productos lácteos</li>
-					<div class="clear"></div>
-					<li class="columna xmall-12 medium-6 large-6">Productos sustitutos de lácteos.</li>
-					<li class="columna xmall-12 medium-6 large-6">Productos agrícolas.</li>
-					<div class="clear"></div>
-					<li class="columna xmall-12 medium-6 large-6">Jugos naturales</li>
-					<li class="columna xmall-12 medium-6 large-6">Refrescos naturales.</li>
-					<li class="clear"></li>
-					<li class="columna xmall-12 medium-6 large-6">Salsas.</li>
-					<div class="clear"></div>
+				<ul class="clearfix margin-bottom">
+				<?php
+				$counterProductos = 1;
+				$productosArgs = array(
+					'post_type' 		=> 'nuestros-productos',
+					'posts_per_page'	=> -1
+				);
+				$productosQuery = new WP_Query($productosArgs);
+				if( $productosQuery->have_posts() ) : while( $productosQuery->have_posts() ) : $productosQuery->the_post();?>
+					<li class="columna xmall-12 medium-6 large-6"><?php the_title(); ?></li>
+					<?php if ($counterProductos%2 == 0){ ?>
+						<div class="clear"></div>
+					<?php } ?>
+				<?php $counterProductos++; endwhile; endif; wp_reset_query();?>
 				</ul>
 			</div>
 		</div>
 	 </section><!--productos-->
 
-	 <section class="clearfix contacto">
-		<div class="width block center fondo-entero">
+	 <section id="contacto" class="contacto"><!--conacto-->
+		<div class="width clearfix">
 			<div id="contacto" class="columna xmall-12 medium-6 large-6 margin-bottom textos-oscuro">
 				<h2>Contacto</h2>
 				<p>Paseo de los tamarindos 90</p>
