@@ -241,7 +241,7 @@
 	 <section class="gmap full" id="mapa">
 		
 	 </section>
-	 <div class="scroll-top-wrapper width">
+	 <div class="scroll-top-wrapper width hide">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">
 	        <i class="right fa fa-2x fa-arrow-circle-up"></i>
 	    </span>
