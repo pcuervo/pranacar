@@ -10,30 +10,21 @@
 	 			data-cycle-timeout="3000"
 	 			data-cycle-slides="> li"
 	 		>
-
-			        <li class="center block columna xmall-12">Enfocados en el bienestar humano</li>		    
-			    
-			        <li class="center block columna xmall-12">Variedad y calidad</li>
-			    
-			        <li class="center block columna xmall-12">Eficiencia total en logística y distribución</li>
-			    
+				<li class="center block columna xmall-12">Enfocados en el bienestar humano</li>
+				<li class="center block columna xmall-12">Variedad y calidad</li>
+				<li class="center block columna xmall-12">Eficiencia total en logística y distribución</li>
 			</ul>
 	 	</div>
-
-	 	<div class="clear"></div>	
-	 	
+	 	<div class="clear"></div>
  		<div class="center block span xmall-6 medium-10 large-4 sub-menu">
-
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">Catálogo</a>
+ 				<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-10" href="">Catálogo</a>
  			</div>
-
- 			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">Contacto</a>
+ 			<div class="columna xmall-12 medium-4 large-4" data-seccion="contacto">
+ 				<a href="" class="block center columna xmall-10 medium-10 large-10" href="">Contacto</a>
  			</div>
-
  			<div class="columna xmall-12 medium-4 large-4">
- 				<a class="block center columna xmall-10 medium-10 large-10" href="">English</a>
+ 				<a href="<?php echo site_url('?lang=en'); ?>" class="block center columna xmall-10 medium-10 large-10" href="">English</a>
  			</div>
  		</div>
 
@@ -43,7 +34,7 @@
 			<div class="width textos-claro">
 				<?php
 				$coverArgs = array(
-					'post_type' 	=> 'acerca-de', 
+					'post_type' 	=> 'acerca-de',
 					'category_name' => 'cover',
 					'posts_per_page'	=> 1
 				);
@@ -52,7 +43,7 @@
 				if( $coverQuery->have_posts() ) : $coverQuery->the_post();
 				?>
 					<h2 class="center block columna xmall-10"><?php the_content();?></h2>
-				<?php		
+				<?php
 				endif;  wp_reset_query();?>
 	 		</div>
 
@@ -63,7 +54,7 @@
 			<div id="acerca" class="center block text-center columna xmall-10 large-8  margin-bottom">
 				<?php
 				$hacemosArgs = array(
-					'post_type' 	=> 'acerca-de', 
+					'post_type' 	=> 'acerca-de',
 					'category_name' => 'que-hacemos',
 					'posts_per_page'	=> 1
 				);
@@ -73,14 +64,14 @@
 				?>
 					<h2><?php the_title() ?></h2>
 			 		<p><?php the_content() ?></p>
-				<?php		
+				<?php
 				endif;  wp_reset_query();?>
 		 	</div>
 
 		 	<div class="columna large-8 center block">
 		 		<?php
 				$misionVisionArgs = array(
-					'post_type' 	=> 'acerca-de', 
+					'post_type' 	=> 'acerca-de',
 					'category_name' => 'mision-vision',
 					'posts_per_page'	=> 2
 				);
@@ -92,9 +83,9 @@
 						<h2><?php the_title() ?></h2>
 				 		<p><?php the_content() ?></p>
 			 		</div>
-				<?php		
+				<?php
 				endwhile; endif;  wp_reset_query();?>
-		 	</div>	
+		 	</div>
 
 	 	</div>
 	 </section><!--acerca-->
@@ -105,7 +96,7 @@
 			<div id="historia" class=" center block columna xmall-8 margin-bottom sub-menu">
 				<?php
 				$historiaArgs = array(
-					'post_type' 	=> 'historia', 
+					'post_type' 	=> 'historia',
 					'posts_per_page'	=> 1
 				);
 				$historiaQuery = new WP_Query($historiaArgs);
@@ -114,7 +105,7 @@
 				?>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_content(); ?>
-				<?php		
+				<?php
 				endif;  wp_reset_query();?>
 
 		 		<h2 class="text-center margin-bottom">¿Dudas?</h2>
@@ -125,9 +116,20 @@
 	 <section class="clearfix fabricantes cover"><!--fabricantes-->
 		<div id="fabricantes" class="width block center textos-claro fondo-entero">
 			<div class=" center block columna xmall-10 medium-10 large-8 margin-bottom">
+				<?php
+				$fabricantesArgs = array(
+					'post_type' 	=> 'que-ofrecemos',
+					'category_name' => 'fabricantes',
+					'posts_per_page'	=> 1
+				);
+				$fabricantesQuery = new WP_Query($fabricantesArgs);
 
-				<h2>A los fabricantes</h2>
-		 		<p>Por medio de una relación cercana con los fabricantes (seleccionados con una metodología enfocada en cumplimiento de estándares de calidad, certificado de los productos y tiempos de entrega), logramos entender sus volúmenes y capacidades para así colocar sus productos en los puntos de venta con más demanda para estos. Dando así, la oportunidad de comercialización, desarrollo y crecimiento al fabricante.</p>
+				if( $fabricantesQuery->have_posts() ) : $fabricantesQuery->the_post();
+				?>
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_content(); ?>
+				<?php
+				endif;  wp_reset_query();?>
 		 	</div>
 		 </div>
 	</section><!--Fabricantes-->
@@ -135,8 +137,20 @@
 	<section class="clearfix clientes cover"><!--clientes-->
 		<div id="fabricantes" class="width block center textos-oscuro">
 		 	<div class="center block columna xmall-10 medium-10 large-8 ">
-		 		<h2>A los clientes</h2>
-		 		<p>Basado en los productos saludables, naturales y orgánicos que obtenemos de los fabricantes logramos darle variedad, calidad y entrega oportuna a nuestros clientes, distribuidores, cadenas comerciales y brokers. Como consecuencia, promovemos el bienestar de los clientes finales que consumen nuestros productos.</p>
+		 		<?php
+				$clientesArgs = array(
+					'post_type' 	=> 'que-ofrecemos',
+					'category_name' => 'clientes',
+					'posts_per_page'	=> 1
+				);
+				$clientesQuery = new WP_Query($clientesArgs);
+
+				if( $clientesQuery->have_posts() ) : $clientesQuery->the_post();
+				?>
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_content(); ?>
+				<?php
+				endif;  wp_reset_query();?>
 		 	</div>
 	 	</div>
 	 </section><!--clientes-->
@@ -147,14 +161,25 @@
 				<h2>Nuestras capacidades</h2>
 
 				<div class="block icono">
-				<span class="fa-stack fa-lg fa-3x">
-				  <i class="fa fa-circle fa-stack-2x"></i>
-				  <i class="fa fa-barcode fa-stack-1x fa-inverse"></i>
-				</span>
-					<p>Atender más de 1000 puntos de venta en México, EEUU y Canadá.</p>
+					<?php
+					$capacidadesArgs = array(
+						'post_type' 	=> 'nuestras-capacidades',
+						'posts_per_page'	=> -1
+					);
+					$capacidadesQuery = new WP_Query($capacidadesArgs);
+
+					if( $capacidadesQuery->have_posts() ) : $capacidadesQuery->the_post();?>
+						<?php
+							$my_postid = $post->ID;
+							$content_post = get_post($my_postid);
+							$content = $content_post->post_content;
+							echo $content;
+						?>
+						<p><?php the_title(); ?></p>
+					<?php endif;  wp_reset_query();?>
 				</div>
-				
-				<div class="block  icono">
+
+				<div class="block icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
 					  <i class="fa fa-file fa-stack-1x fa-inverse"></i>
@@ -177,7 +202,7 @@
 					</span>
 					<p>Atención personalizada a todos nuestros proveedores y clientes.</p>
 				</div>
-				
+
 				<div class="block icono">
 					<span class="fa-stack fa-lg fa-3x">
 					  <i class="fa fa-circle fa-stack-2x"></i>
@@ -198,7 +223,7 @@
 				<ul class="center block columna xmall-12 margin-bottom">
 					<li class="columna xmall-12 medium-6 large-6">Productos agrícolas.</li>
 					<li class="columna xmall-12 medium-6 large-6">Botanas y postres saludables.</li>
-					
+
 					<div class="clear"></div>
 					<li class="columna xmall-12 medium-6 large-6">Productos de higiene y cuidado personal.</li>
 					<li class="columna xmall-12 medium-6 large-6">Suplementos alimenticios y vitaminas.</li>
@@ -219,9 +244,8 @@
 		</div>
 	 </section><!--productos-->
 
-	 <section class="clearfix contacto"><!--productos-->
+	 <section class="clearfix contacto">
 		<div class="width block center fondo-entero">
-
 			<div id="contacto" class="columna xmall-12 medium-6 large-6 margin-bottom textos-oscuro">
 				<h2>Contacto</h2>
 				<p>Paseo de los tamarindos 90</p>
@@ -242,11 +266,14 @@
 				        <input class="columna xmall-12" type="email" id="email" placeholder="nombre@ejemplo.com" required/>
 
 				        <label class="columna xmall-12" for="msg">Mensaje:</label>
-				        <textarea class="columna xmall-12" id="msg" placeholder="Escribe aquí tu comentario." required></textarea>    
-				</fieldset>  
+				        <textarea class="columna xmall-12" id="msg" placeholder="Escribe aquí tu comentario." required></textarea>
+				</fieldset>
 			</div>
 		</div>
-	 </section><!--productos-->
+	 </section><!--contacto-->
+	 <section class="gmap full">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.1568713983697!2d-99.24043789999993!3d19.4056269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201735ccbb933%3A0xe8000e5f6405a4fb!2sPaseo+de+Los+Tamarindos+90%2C+Bosques+de+Las+Lomas%2C+Cuajimalpa+de+Morelos%2C+05120+Ciudad+de+M%C3%A9xico%2C+D.F.%2C+M%C3%A9xico!5e0!3m2!1ses!2s!4v1407442164070" frameborder="0" style="border:0"></iframe>
+	 </section>
 	 <div class="scroll-top-wrapper width">
 	    <span class="scroll-top-inner columna xmall-12 margin bottom">
 	        <i class="right fa fa-2x fa-arrow-circle-up"></i>

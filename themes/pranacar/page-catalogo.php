@@ -50,6 +50,8 @@
 						$slug 		= $categoria->slug;
 						$nombre 	= $categoria->name;
 						$catID 		= $categoria->cat_ID;
+
+
 						if ( $categoria->parent == 0 ){
 
 							$childrenArgs = array(
@@ -57,7 +59,6 @@
 								'hide_empty' => false
 							);
 							$children = get_terms( 'tax-catalogo', $childrenArgs);
-
 					?>
 						<div class="columna full categoria center">
 							<h2><?php echo $nombre; ?></h2>
