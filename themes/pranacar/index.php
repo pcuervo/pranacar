@@ -75,7 +75,7 @@
 				<?php
 				$hacemosArgs = array(
 					'post_type' 	=> 'acerca-de',
-					'category_name' => 'que-hacemos',
+					'category_name' => 'QUÉ-HACEMOS',
 					'posts_per_page'	=> 1
 				);
 				$hacemosQuery = new WP_Query($hacemosArgs);

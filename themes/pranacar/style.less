@@ -246,7 +246,7 @@ body{ background: #fff;}
 }
 
 h1{ }
-h2{ .font(2em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2);}
+h2{ .font(2em, 1, 100, ~'normal', ~'roboto'); margin-bottom: (@margen/2); text-transform: uppercase;}
 h3{ .font(2em, 1, 400, ~'normal', ~'lora');}
 p{ .font(1em, 1.7em, 100, ~'normal', ~'roboto');}
 h2, h3{ margin: 0 0 (@margen/4) 0; }
@@ -290,7 +290,7 @@ a{color:lighten(@oscuro,50%); text-decoration: none;
 header{ padding: @margen 0;
 
 	> div{ position: relative; }
-	nav{ display: none; padding-top: 5%; width: 100%;
+	nav{ display: none; padding-top: 5%; width: 100%; text-transform: uppercase;
 		a{ width: 100%; display: block; vertical-align: middle; padding: (@margen/2); .font(1em, 1.5em, 100, ~'normal', ~'roboto'); letter-spacing: 0.1em; color: @oscuro; text-decoration: none; text-align: center; border-top: 2px solid @claro;
 			&:hover, &.active{ border-top: 2px solid @highlight; }
 		}
@@ -348,7 +348,7 @@ header{ padding: @margen 0;
 }
 
 .somos{background-size: cover; padding: (@margen*4) 0;
-	h2{text-align: center; background: rgba(0, 0, 0, .4); padding: @margen;
+	h2{text-align: center; background: rgba(0, 0, 0, .4); padding: @margen; text-transform: none;
 	}
 }
 
@@ -391,8 +391,8 @@ header{ padding: @margen 0;
 }
 
  .sub-menu{
- 	a{text-align: center; padding: (@margen/2); border: solid 2px @highlight; .border-radius; margin: (@margen/2); background: transparent; .transition(all 0.5s ease);
-		.font(1.2em, 1.5em, 300, ~'normal', ~'roboto');
+ 	a{text-align: center; padding: (@margen/2); color: lighten(@oscuro,25%); border: solid 2px @highlight; .border-radius; margin: (@margen/2); background: transparent; .transition(all 0.5s ease);
+		.font(1.2em, 1.5em, 350, ~'normal', ~'roboto');
 		&:hover{color: @claro; opacity: 0.8; background: lighten(@highlight,10%); border: solid 2px; border-color: lighten(@highlight,30%);}
  	}
  }
