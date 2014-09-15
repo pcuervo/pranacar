@@ -273,15 +273,15 @@
 					<?php } else { ?>
 						<label class="block full" for="nombre">Name:</label>
 					<?php } ?>
-			        <input class="block full" type="text" id="nombre" required/>
+			        <input class="block full required" type="text" name="nombre"/>
 			        <label class="block full" for="email">E-mail:</label>
-			        <input class="block full required email" type="email" id="email" name="email" required/>
+			        <input class="block full required email" type="email" name="email"/>
 					<?php if (qtrans_getLanguage() == 'es'){ ?>
-		 				<label class="block full" for="msg">Mensaje:</label>
+		 				<label class="block full" for="mensaje">Mensaje:</label>
 					<?php } else { ?>
-						<label class="block full" for="msg">Message:</label>
+						<label class="block full" for="mensaje">Message:</label>
 					<?php } ?>
-			        <textarea name="mensaje" class="block full required" id="msg" required></textarea>
+			        <textarea name="mensaje" class="block full required"></textarea>
 					<?php if (qtrans_getLanguage() == 'es'){ ?>
 			        	<input class="block full" type="submit" value="Enviar">
 			        <?php } else { ?>

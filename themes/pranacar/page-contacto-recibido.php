@@ -6,8 +6,8 @@
 	$email 		= ( isset($_POST['email']) ) ? $_POST['email'] : '';
 	$mensaje 	= ( isset($_POST['mensaje']) ) ? $_POST['mensaje'] : '';
 
-	//$mail_to = 'franco@pranacar.com';
-	$mail_to = 'raul@pcuervo.com';
+	$mail_to = 'franco@pranacar.com';
+	//$mail_to = 'raul@pcuervo.com';
 	$subject = 'Contacto Pranacar';
 
 	$body_message = 'Nombre: '.$nombre."\n";
@@ -24,7 +24,7 @@
 
 	 <section class="somos cover"><!--somos-->
 			<div class="width textos-claro">
-				<h2 class="center block columna xmall-10">Gracias por contactárnos, te enviarémos una respuesta lo antes posible</h2>
+				<h2 class="center block columna xmall-10">Gracias por contactárnos, te enviarémos una respuesta lo antes posible.</h2>
 	 		</div>
 	 </section><!--somos-->
 
