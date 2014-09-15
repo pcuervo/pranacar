@@ -267,26 +267,27 @@
 				<?php } else { ?>
 					<h2>Contact us</h2>
 				<?php } ?>
-				<form  action="" method="post">
-				<fieldset class="margin-bottom">
+				<form class="forma-contacto margin-bottom" action="<?php echo site_url('contacto-recibido'); ?>" method="post">
 					<?php if (qtrans_getLanguage() == 'es'){ ?>
-		 				<label class="columna xmall-12" for="nombre">Nombre:</label>
+		 				<label class="block full" for="nombre">Nombre:</label>
 					<?php } else { ?>
-						<label class="columna xmall-12" for="nombre">Name:</label>
+						<label class="block full" for="nombre">Name:</label>
 					<?php } ?>
-			        <input class="columna xmall-12" type="text" id="nombre" required/>
-
-			        <label class="columna xmall-12" for="email">E-mail:</label>
-			        <input class="columna xmall-12" type="email" id="email" required/>
-
+			        <input class="block full" type="text" id="nombre" required/>
+			        <label class="block full" for="email">E-mail:</label>
+			        <input class="block full required email" type="email" id="email" name="email" required/>
 					<?php if (qtrans_getLanguage() == 'es'){ ?>
-		 				<label class="columna xmall-12" for="msg">Mensaje:</label>
+		 				<label class="block full" for="msg">Mensaje:</label>
 					<?php } else { ?>
-						<label class="columna xmall-12" for="msg">Message:</label>
+						<label class="block full" for="msg">Message:</label>
 					<?php } ?>
-
-			        <textarea class="columna xmall-12" id="msg" required></textarea>
-				</fieldset>
+			        <textarea name="mensaje" class="block full required" id="msg" required></textarea>
+					<?php if (qtrans_getLanguage() == 'es'){ ?>
+			        	<input class="block full" type="submit" value="Enviar">
+			        <?php } else { ?>
+						<input class="block full" type="submit" value="Send">
+					<?php } ?>
+				</form>
 			</div>
 		</div>
 	 </section><!--contacto-->
