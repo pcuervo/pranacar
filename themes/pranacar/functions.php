@@ -256,3 +256,9 @@
 			OR isset($query->post_title) AND preg_match("/$string/i", remove_accents(str_replace(' ', '-', $query->post_title) ) ) )
 			echo 'active';
 	}
+
+	/**
+	 * Para poder traducir custom taxonomies
+	 */
+	add_action('tax-catalogo_add_form', 'qtrans_modifyTermFormFor');
+	add_action('tax-catalogo_edit_form', 'qtrans_modifyTermFormFor');
