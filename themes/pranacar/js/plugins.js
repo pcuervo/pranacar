@@ -72,9 +72,9 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
  */
 (function($) {
 	$.extend($.validator.messages, {
-		required: "Este campo es obligatorio.",
+		required: "Este campo es obligatorio. <em>This field is required.</em>",
 		remote: "Por favor, rellena este campo.",
-		email: "Por favor, escribe una dirección de correo válida.",
+		email: "Por favor escribe una dirección de correo válida. <em>Please wirte a valid email address.</em>",
 		url: "Por favor, escribe una URL válida.",
 		date: "Por favor, escribe una fecha válida.",
 		dateISO: "Por favor, escribe una fecha (ISO) válida.",

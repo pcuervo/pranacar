@@ -54,7 +54,6 @@
 						$nombre 	= $categoria->name;
 						$catID 		= $categoria->cat_ID;
 
-
 						if ( $categoria->parent == 0 ){
 
 							$childrenArgs = array(
@@ -74,9 +73,6 @@
 							<ul class="hide">
 								<?php
 									if($children) {
-									 	// echo '<pre>';
-										// 	print_r($children);
-										// echo '</pre>';
 										foreach ($children as $child) {
 											$childSlug 		= $child->slug;
 											$childNombre 	= $child->name;
@@ -105,8 +101,16 @@
 														<p class="full text-center">Net Weight: <?php echo $contenido_en; ?></p>
 													<?php } ?>
 													<div class="clear"></div>
-													<?php the_post_thumbnail( 'large', array('class' => 'columna xmall-6') ); ?>
-													<div class="columna xmall-6"><?php the_content(); ?></div>
+													<?php
+														ob_start();
+														the_content();
+														$content = ob_get_clean();
+														if ( $content !== '' ){
+															the_post_thumbnail( 'large', array('class' => 'columna xmall-6') ); ?>
+															<div class="columna xmall-6"><?php the_content(); ?></div>
+													<?php } else {
+														the_post_thumbnail( 'large', array('class' => 'block columna xmall-6 center') );
+													} ?>
 												</li>
 											<?php
 												if($childCounter %3 == 0) {
@@ -139,8 +143,16 @@
 												<p class="full text-center">Net Weight: <?php echo $contenido_en; ?></p>
 											<?php } ?>
 											<div class="clear"></div>
-											<?php the_post_thumbnail( 'large', array('class' => 'columna xmall-6') ); ?>
-											<div class="columna xmall-6"><?php the_content(); ?></div>
+											<?php
+												ob_start();
+												the_content();
+												$content = ob_get_clean();
+												if ( $content !== '' ){
+													the_post_thumbnail( 'large', array('class' => 'columna xmall-6') ); ?>
+													<div class="columna xmall-6"><?php the_content(); ?></div>
+											<?php } else {
+												the_post_thumbnail( 'large', array('class' => 'block columna xmall-6 center') );
+											} ?>
 										</li>
 
 									<?php
