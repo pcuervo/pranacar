@@ -88,7 +88,7 @@
 				endif;  wp_reset_query();?>
 		 	</div>
 
-		 	<div class="columna large-8 center block clearfix">
+		 	<div class="columna large-10 center block clearfix">
 		 		<?php
 				$misionVisionArgs = array(
 					'post_type' 	=> 'acerca-de',
