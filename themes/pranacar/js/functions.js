@@ -28,6 +28,8 @@
 			abrirMenu( $('nav.menu') );
 		});
 
+		$('.forma-contacto').validate();
+
 		creaMapa(19.388209, -99.250840);
 
 	});
@@ -89,6 +91,4 @@
 		}
 		google.maps.event.addDomListener(window, 'load', initialize(lat, lng));
 	}
-
-
 })(jQuery);
