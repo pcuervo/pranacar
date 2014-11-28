@@ -25,9 +25,9 @@
  		<div class="clearfix center block span xmall-6 medium-10 large-4 sub-menu">
  			<div class="columna xmall-12 medium-4 large-4">
  				<?php if (qtrans_getLanguage() == 'es'){ ?>
- 					<a href="<?php echo site_url('catalogo'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catálogo</a>
+ 					<a href="<?php echo THEMEPATH; ?>pdf/catalogo-pranacar.pdf" class="block center columna xmall-10 medium-10 large-12">Catálogo</a>
  				<?php } else { ?>
-					<a href="<?php echo site_url('catalogo/?lang=en'); ?>" class="block center columna xmall-10 medium-10 large-12" href="">Catalog</a>
+					<a href="<?php echo THEMEPATH; ?>pdf/catalogo-pranacar.pdf" class="block center columna xmall-10 medium-10 large-12">Catalog</a>
 				<?php } ?>
  			</div>
  			<div class="columna xmall-12 medium-4 large-4">
